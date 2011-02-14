@@ -1,0 +1,62 @@
+<html>
+
+<head>
+<style>
+    body {
+ 	background: black;
+	overflow:hidden;
+	padding:0;
+	margin:0;
+	}
+
+    #cos {
+        color: green;
+    }
+    #random {
+        color: blue;
+    }
+
+    #sin {
+        color: magenta;
+    }
+    #random2 {
+        color: red;
+    }
+
+</style>
+<title>Stats</title>
+<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+<script type="text/javascript" src="stats.js"></script>
+<script type="text/javascript" src="main.js"></script>
+<script type="text/javascript" src="jquery-1.4.2.js"></script>
+<script type="text/javascript">
+$.noConflict();
+</script>
+
+<script type="text/javascript">
+
+window.addEventListener("load",
+function() {
+  setupStats();
+}
+,true);
+
+</script>
+</head>
+
+<body>
+  <center>
+    <div>
+      <div id="cos" > Cos </div>
+      <div id="random" > random </div>
+      <canvas style="" id="fps_memory" width="800" height="150" ></canvas>
+    </div>
+
+    <div>
+      <div id="sin" style="left: auto; margin-right: 10px"> Sin </div>
+      <div id="random2" > random </div>
+      <canvas id="update_cull_draw" width="800" height="400" ></canvas>
+    </div>
+  </center>
+</body>
+</html>
