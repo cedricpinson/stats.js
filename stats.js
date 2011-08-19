@@ -46,10 +46,15 @@ Stats.Stats.prototype = {
         if (this.last_update === undefined) {
             this.last_update = t;
         }
+
         var delta = (t - this.last_update)* 2.0*60.0/1000.0;
         if (delta < 1.0) {
             return;
         }
+
+        var report = delta - Math.floor(delta);
+        t -= report/(2.0*60.0/1000.0);
+        delta = Math.floor(delta);
 
         var translate = delta;
         var c = this.canvas;
