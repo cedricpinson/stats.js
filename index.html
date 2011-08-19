@@ -1,0 +1,72 @@
+<html>
+
+<head>
+<style>
+    body {
+ 	background: #212121;
+	overflow:hidden;
+	padding:0;
+	margin:0;
+	}
+a {
+	color:#99ccff;
+	text-decoration:none;
+}
+a:hover {
+	color:#c7efff;
+}
+html {
+    image-rendering: -webkit-optimize-contrast;
+}
+    #cos {
+        color: #3ba8c7;
+    }
+    #random {
+        color: #d07b1f;
+    }
+
+    #sin {
+        color: #73e0ff;
+    }
+    #random2 {
+        color: #944b10;
+    }
+
+</style>
+<title>Stats</title>
+<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+<script type="text/javascript" src="stats.js"></script>
+<script type="text/javascript" src="main.js"></script>
+<script type="text/javascript" src="jquery-1.4.2.js"></script>
+<script type="text/javascript">
+$.noConflict();
+</script>
+
+<script type="text/javascript">
+
+window.addEventListener("load",
+function() {
+  setupStats();
+}
+,true);
+
+</script>
+</head>
+
+<body>
+  <center>
+  <a href="https://bitbucket.org/cedricpinson/stats.js/overview"> <h1> Get it on bitbucket </h1></a>
+    <div>
+      <div id="cos" > Cos </div>
+      <div id="random" > random </div>
+      <canvas style="" id="fps_memory" width="800" height="150" ></canvas>
+    </div>
+
+    <div>
+      <div id="sin" style="left: auto; margin-right: 10px"> Sin </div>
+      <div id="random2" > random </div>
+      <canvas id="update_cull_draw" width="800" height="400" ></canvas>
+    </div>
+  </center>
+</body>
+</html>
